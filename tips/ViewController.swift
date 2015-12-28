@@ -15,12 +15,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        let defaults = NSUserDefaults.standardUserDefaults()
+        var defaultIndex = defaults.integerForKey("default_index")
+        tipControl.selectedSegmentIndex = defaultIndex
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
+        self.title = "Tip Calculator"
     }
 
     override func didReceiveMemoryWarning() {

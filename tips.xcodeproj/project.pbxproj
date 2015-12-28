@@ -16,6 +16,7 @@
 		7A26D6C31C3089340089ECD3 /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26D6C21C3089340089ECD3 /* tipsUITests.swift */; };
 		7A4D30721C31BA2700018779 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A4D30711C31BA2700018779 /* .gitignore */; };
 		7A4D30741C31BB7D00018779 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D30731C31BB7D00018779 /* README.md */; };
+		7A4D30761C31C14C00018779 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4D30751C31C14C00018779 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7A26D6C41C3089340089ECD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A4D30711C31BA2700018779 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7A4D30731C31BB7D00018779 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7A4D30751C31C14C00018779 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		7A26D6A11C3089340089ECD3 /* tips */ = {
 			isa = PBXGroup;
 			children = (
+				7A4D30751C31C14C00018779 /* SettingsViewController.swift */,
 				7A26D6A21C3089340089ECD3 /* AppDelegate.swift */,
 				7A26D6A41C3089340089ECD3 /* ViewController.swift */,
 				7A26D6A61C3089340089ECD3 /* Main.storyboard */,
@@ -266,6 +269,7 @@
 				7A4D30741C31BB7D00018779 /* README.md in Sources */,
 				7A26D6A51C3089340089ECD3 /* ViewController.swift in Sources */,
 				7A26D6A31C3089340089ECD3 /* AppDelegate.swift in Sources */,
+				7A4D30761C31C14C00018779 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
