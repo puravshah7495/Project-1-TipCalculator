@@ -14,6 +14,7 @@
 		7A26D6AD1C3089340089ECD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A26D6AB1C3089340089ECD3 /* LaunchScreen.storyboard */; };
 		7A26D6B81C3089340089ECD3 /* tipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26D6B71C3089340089ECD3 /* tipsTests.swift */; };
 		7A26D6C31C3089340089ECD3 /* tipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A26D6C21C3089340089ECD3 /* tipsUITests.swift */; };
+		7A4D30721C31BA2700018779 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7A4D30711C31BA2700018779 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7A26D6BE1C3089340089ECD3 /* tipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tipsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A26D6C21C3089340089ECD3 /* tipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tipsUITests.swift; sourceTree = "<group>"; };
 		7A26D6C41C3089340089ECD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4D30711C31BA2700018779 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		7A26D6961C3089340089ECD3 = {
 			isa = PBXGroup;
 			children = (
+				7A4D30711C31BA2700018779 /* .gitignore */,
 				7A26D6A11C3089340089ECD3 /* tips */,
 				7A26D6B61C3089340089ECD3 /* tipsTests */,
 				7A26D6C11C3089340089ECD3 /* tipsUITests */,
@@ -229,6 +232,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4D30721C31BA2700018779 /* .gitignore in Resources */,
 				7A26D6AD1C3089340089ECD3 /* LaunchScreen.storyboard in Resources */,
 				7A26D6AA1C3089340089ECD3 /* Assets.xcassets in Resources */,
 				7A26D6A81C3089340089ECD3 /* Main.storyboard in Resources */,
@@ -482,6 +486,7 @@
 				7A26D6C91C3089340089ECD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A26D6CA1C3089340089ECD3 /* Build configuration list for PBXNativeTarget "tipsTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +495,7 @@
 				7A26D6CC1C3089340089ECD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A26D6CD1C3089340089ECD3 /* Build configuration list for PBXNativeTarget "tipsUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +504,7 @@
 				7A26D6CF1C3089340089ECD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
