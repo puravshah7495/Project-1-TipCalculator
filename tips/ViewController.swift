@@ -15,11 +15,32 @@ class ViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     
+    let defaults = NSUserDefaults.standardUserDefaults()
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let defaults = NSUserDefaults.standardUserDefaults()
+        
         var defaultIndex = defaults.integerForKey("default_index")
+        var previousBill = defaults.stringForKey("previous_bill")
+        var billTimeout = defaults.objectForKey("bill_timeout")
+        
+        if (previousBill != nil && billTimeout != nil) {
+            var timeout:NSDate = billTimeout as! NSDate
+            var dateComparison:NSComparisonResult = NSDate().compare(timeout)
+            if (dateComparison == NSComparisonResult.OrderedAscending) {
+                billField.text = previousBill
+            } else {
+                defaults.setNilValueForKey("previous_bill")
+            }
+        }
+        
         tipControl.selectedSegmentIndex = defaultIndex
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        billField.becomeFirstResponder()
     }
     
     override func viewDidLoad() {
@@ -36,7 +57,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        var input = billField.text!
+        defaults.setObject(input, forKey: "previous_bill")
+        defaults.setObject(NSDate(timeIntervalSinceNow: 600), forKey: "bill_timeout")
+        defaults.synchronize()
+    }
+    
     @IBAction func onEditingChanged(sender: AnyObject) {
         var tipPercentages = [0.18,0.2,0.22]
         var tipPercentage = tipPercentages[tipControl.selectedSegmentIndex]
@@ -50,8 +79,8 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func onTap(sender: AnyObject) {
+    /*@IBAction func onTap(sender: AnyObject) {
         view.endEditing(true)
-    }
+    }*/
 }
 
