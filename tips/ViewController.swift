@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         bottomView.alpha = 0
-        billField.frame.origin.y = billField.frame.height * 1.8
+        billField.frame.origin.y = billField.frame.height * 1.3
         
         let defaultIndex = defaults.integerForKey("default_index")
         let previousBill = defaults.stringForKey("previous_bill")
@@ -33,10 +33,10 @@ class ViewController: UIViewController {
             let timeout:NSDate = billTimeout as! NSDate
             let dateComparison:NSComparisonResult = NSDate().compare(timeout)
             if (dateComparison == NSComparisonResult.OrderedAscending) {
-                print(previousBill)
                 billField.text = previousBill
                 bottomView.alpha = 1
-                billField.frame.origin.y -= billField.frame.height
+                billField.frame.origin.y = billField.frame.height/1.8
+                onEditingChanged(billField)
             } else {
                 defaults.setObject(nil, forKey: "previous_bill")
                 defaults.synchronize()
@@ -90,13 +90,13 @@ class ViewController: UIViewController {
         if (bill != "" && previousInput == "") {
             UIView.animateWithDuration(0.2, animations: {
                 self.bottomView.alpha = 1
-                self.billField.frame.origin.y -= self.billField.frame.height
+                self.billField.frame.origin.y = self.billField.frame.height/1.8
             })
         }
         if (bill == "" && previousInput != "") {
             UIView.animateWithDuration(0.2, animations: {
                 self.bottomView.alpha = 0
-                self.billField.frame.origin.y += self.billField.frame.height
+                self.billField.frame.origin.y = self.billField.frame.height * 1.3
             })
         }
         
